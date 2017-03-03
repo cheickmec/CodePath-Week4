@@ -13,7 +13,7 @@ $state = array(
   'country_id' => $_GET['id']
 );
 
-if(is_post_request() && request_is_same_domain() && csrf_token_is_valid()) {
+if(is_post_request() && request_is_same_domain() /*&& csrf_token_is_valid()*/) {
 
   // Confirm that values are present before accessing them.
   if(isset($_POST['name'])) { $state['name'] = $_POST['name']; }
