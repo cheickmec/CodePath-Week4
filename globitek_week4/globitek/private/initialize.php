@@ -7,11 +7,11 @@ ob_start();
 // Enable sessions
 session_start([
   //only use cookies to store the session id on the client side
-  'session.use_only_cookies' => true,
+  'use_only_cookies' => 1,
   //Set cookie Lifetime to 86400 seconds (a day)
   'cookie_lifetime' => 86400,
   //Mark cookie as accessible only through the HTTP protocol
-  'session.cookie_httponly' => true
+  'cookie_httponly' => 1
 ]);
 
 // Turns off any browser built-in XSS protections
